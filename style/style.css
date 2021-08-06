@@ -3,8 +3,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Yrsa:ital,wght@1,300&display=swap');
 
-font-family: 'Yrsa', serif;
-
 
 *{
 
@@ -115,7 +113,7 @@ font-size:22px;
 font-family: "georama";
 letter-spacing: 0.9px;
 color:#fff;
-text-decoration: uppercase;
+
 
 
 }
@@ -132,7 +130,7 @@ background:#659ec7;
 .container {
 
   text-align: center;
-  padding:16px;
+  padding:0;
   font-family:"georama";
   line-height: 2;
 }
@@ -143,7 +141,7 @@ background:#659ec7;
 position: absolute;
 left:50%;
 top:50%;
-transform: translate( -50%, -50% );
+transform: translate ( -50%, -50% );
 
 
 }
@@ -173,9 +171,6 @@ right:300px;
   margin-top: 60px;
   position: absolute;
   top:410px;
-  bottom: 0;
-  left:27px;
-  right: 0;
 
 }
 
@@ -204,7 +199,7 @@ right:300px;
 }
 
 .text a {
-  display:inline block;
+  display:inline-block;
   font-size: 0.8em;
   background:#fff;
   padding:10px;
@@ -227,17 +222,11 @@ font-size:1.8em;
 margin:50px 0;
 font-weight: 400;
 max-width: 700px;
-font-style:
 padding:10px 30px;
 margin-top:10px;
 letter-spacing:2px;
 color: white;
 text decoration: none;
-top:410px;
-margin-right: 30px;
-box-sizing: border-box;
-
-
 }
 
 @media (max-width:991px)
@@ -279,7 +268,7 @@ input [ type=text]
   border: none;
   font-size: 16px;
   font-family: "Georama";
-  background-color:;
+
 }
 
 button {
@@ -340,7 +329,7 @@ div, textarea, input{
     margin: -6px;
     padding: 7px;
     font-family: "Georama",sans-serif;
-    display: inline-block;
+    /* display: inline-block; */
     text-align: center;
     margin-top: 15px;
     font-size: 20px;
@@ -419,6 +408,7 @@ padding: 10px;
   margin: 10px;
   padding: 10px;
   position: relative;
+  list-style: none;
 
   }
 
@@ -430,6 +420,7 @@ padding: 10px;
   margin-bottom: 50px;
   color:#23395d;
   text-align: center;
+  border-style:none;
 }
 
 .ingredients {
@@ -442,6 +433,8 @@ font-size: 23px;
 padding: 25px;
 border:5px;
 color: orange;
+list-style: none;
+
 
 }
 
@@ -460,6 +453,7 @@ color:black;
 box-sizing: border-box;column-fill: auto;
 font-size: 17px;
 text-align: center;
+list-style: none;
 
 }
 
@@ -469,121 +463,211 @@ text-align: center;
   background-color: #e6ebef;
   box-sizing: content-box;
   font-size: 14px;
+  list-style:none;
 }
 
-body {
+.ingredients body {
 background-color : white;
 font-family :"georama";
 }
-div, textarea, input {
+.ingredients div, textarea, input {
 box-sizing : border-box;
+list-style: none;
 }
-.box-2 {
+
+
+/* contact us */
+
+
+.contact-us {
 max-width : 400px;
 min-width : 324px;
-margin : 80px auto 180px;
-background-color : #f1e3dd;
-border-bottom : 3px solid gray;
+margin: 50px auto 0px;
+background-color: #85a4ad;
+border:10px #37475c;
 padding-left : 20px;
 padding-right : 10px;
 text-align : left;
-height: auto;
+height:fit content;
+list-style: none;
 }
-.row {
+.row body {
 width : 100%;
 margin : 0 0 1em 0;
 padding : 0 2.5em;
+list-style:none;
+text-align: left;
 }
 
 .row header{
 padding:1.5em 2.5em;
-background:
+border-bottom: 1px solid #f1e3dd;
+background:url(images/kkeys.jpg) left -80%;
 color:white;
-width: 200;
 
+}
 
+.contact-us body {
+  text-align: left;
+  padding: .5em 2.5em 1em;
 }
 .pull-right {
 float : right;
 }
-ul {
-margin : 0;
-padding : 0;
+
+.contact-us h1 {
+font-family: "georama"
+color:"white";
+font-size:20px;
+font-weight: 100;
+display:inline-block;
+border-bottom: 1px solid hsla(100%,100%,100%,0.3);
+margin:0 0 0.1em 0;
+padding:0 0 0.4em 0;
+list-style: none;
+text-align:center;
+letter-spacing:0.1em;
+margin-bottom: 2px;
 }
-li {
-margin : 0 0 0.25em 0;
-clear : both;
-display : inline-block;
-width : 100%;
+
+
+
+.btn {
+  font-size: pxtoem(17, 16);
+  display: inline-block;
+  padding: 0.74em 1.5em;
+  margin: 1.5em 0 0;
+  color: $white;
+  border-width: 0 0 0 0;
+  border-bottom: 5px solid;
+  text-transform: uppercase;
+  color: btn(darken($grey, 10%));
+  &.btn-submit {
+    @include btn($blue);
+  }
 }
-p {
-margin : 0;
-padding : 0;
-margin-bottom : 15px;
-text-align : left;
+
+.action {
+  max-width: 100%;
+  display: block;
+  list-style: none;
+  text-align: left;
 }
-.divider {
-margin : 0.5em 0 0.5em 0;
-border : 0;
-height : 1px;
-width : 100%;
-display : block;
-background-color : #4f6fad;
+  .action ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+  }
+  .action li {
+  margin: 0 0 0.25em 0;
+  clear: both;
+  display: inline-block;
+  width: 100%;
+  &:last-child {
+  margin: 0;
+        }
+  .action  p {
+          margin: 0;
+          padding: 0;
+          float: left;
+          &.right {
+            float: right;
+          }
+        }
+  .divider {
+          margin: 0.5em 0 0.5em 0;
+          border: 0;
+          height: 1px;
+          width: 100%;
+          display: block;
+          background-color: $blue;
+          background-image: linear-gradient(to right, $pink, $blue);
+          border-style: none;
+        }
+      .action  .req {
+          color: $pink;
+        }
+    }
+  }
+  .action label {
+    display: block;
+    margin: 0 0 0.5em 0;
+    color: $blue;
+    font-size: pxtoem(16, 16);
+  }
+  .action input {
+    margin: 0 0 0.5em 0;
+    border: 1px solid $grey;
+    padding: 6px 10px;
+    color: $dark_grey;
+    font-size: pxtoem(16, 16);
+  }
+  .action textarea {
+    border: 1px solid $grey;
+    padding: 6px 10px;
+    width: 100%;
+    color: $dark_grey;
+  }
+.action  small {
+    color: $blue;
+    margin: 0 0 0 0.5em;
+  }
 }
-.req {
-color : #ee9cb4;
+
+// Media Queries
+
+@media only screen and (max-width:480px) {
+  .pull-right {
+    float: none;
+  }
+  .action input {
+    width: 100%;
+  }
+  .action label {
+    width: 100%;
+    display: inline-block;
+    float: left;
+    clear: both;
+  }
+  .action li, p {
+   width: 100%;
+  }
+  .action input.btn {
+   margin: 1.5em 0 0.5em;
+  }
+  .action h1 {
+   font-size: pxtoem(36, 16);
+  }
+  .action h3 {
+    font-size: pxtoem(18, 16)
+  }
+  .action li small {
+   display: none;
+  }
 }
-input {
-margin : 0 0 0.5em 0;
-border : grey solid 1px;
-padding : 6px 10px;
-color : darkgray;
-}
-.textarea {
-border : #ccc solid 1px;
-padding : 6px 10px;
-width : 100%;
-color : #ccc;
-}
-.small {
-color : #4f6fad;
-}
-@media only screen and (max-width: 480px) {
-.pull-right {
-float : none;
-}
-input {
-width : 100%;
-}
-label {
-width : 100%;
-display : inline-block;
-float : left;
-clear : both;
-}
-}
-input.btn {
+.action input.btn {
 margin : 1.5em 0 0.5em;
 }
-li small {
+.action li small {
 display : none;
 }
-input + span {
+.action input + span {
 position : absolute;
 }
-input + span ::before {
+.action input + span ::before {
 position : absolute;
 right : -20px;
 top : 5px;
 }
-input:invalid {
+.action input:invalid {
 color : purple;
 }
-input:invalid + span::before {
+.action input:invalid + span::before {
 content : "x";
 color : purple;
 }
-input:valid + span::before {
+.action input:valid + span::before {
 color : blue;
 }
 
