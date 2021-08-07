@@ -497,31 +497,33 @@ list-style: none;
   list-style:none;
   margin-bottom: 30PX;
 }
+@@keyframes 
 
-.checkbox body {
-  background: #444;
-  display: flex;
-  flex-direction:row;
+{
+
+  0% { background-color: darkblue;}
+  50% { background-color: pink;
+
+  background-color: darkblue;
+  animation-duration: 5s;
 }
 
 
-.credits {
-  text-align: right;
-  margin-top: 15px;
-
-}
-a {
+.column  {
+  display:absolute;
+  margin-left: 30px;
 
 
 }
 
-  .food li ul {
-    float: left;
-    width: 16.666%;
-    height: 600px;
-    opacity: 0.4;
 
-  }
+.food : : {
+content:"";
+clear:both;
+
+
+
+}
     @include transition (all .5s ease-in-out);
 
     &:hover,
@@ -582,30 +584,11 @@ a {
   &:nth-child(4)::before { background-color: rgba(156, 39, 176, .2)}
 }
 
-input:checked ~ ul li::before {
+.food input:checked ~ ul li::before {
   width: 100%;
   @include transition(all .5s ease-in-out);
 }
 
-input[type="checkbox"] {
-  width:555px;
-  margin: 15px;
-  font-family: "yaris", "georama", monospace;
-  color: white;
-  &::before {
-    content: "Pure CSS Accordion";
-    font-size: 1.5em;
-    position: relative;
-    top:-10px;
-  }
-  &::after{
-    content: "Filters Enabled";
-    color: #caa;
-    position: relative;
-    top:-10px;
-    left: 5px;
-  }
-}
 
 
 /* contact us */
