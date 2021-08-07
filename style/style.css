@@ -461,7 +461,7 @@ list-style: none;
 
   color:black;
   background-color: #e6ebef;
-  box-sizing: content-box;
+  box-sizing:content-box;
   font-size: 14px;
   list-style:none;
 }
@@ -473,6 +473,138 @@ font-family :"georama";
 .ingredients div, textarea, input {
 box-sizing : border-box;
 list-style: none;
+}
+
+
+
+/* Gallery */
+
+@import "compass/css3";
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -ms-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+.food h1{
+
+  font-style: "Yrsa";
+  font-size: 80px;
+  color:#23395d;
+  text-align: center;
+  list-style:none;
+  margin-bottom: 30PX;
+}
+
+.checkbox body {
+  background: #444;
+  display: flex;
+  flex-direction:row;
+}
+
+
+.credits {
+  text-align: right;
+  margin-top: 15px;
+
+}
+a {
+
+
+}
+
+  .food li ul {
+    float: left;
+    width: 16.666%;
+    height: 600px;
+    opacity: 0.4;
+
+  }
+    @include transition (all .5s ease-in-out);
+
+    &:hover,
+    &:first-child ~ li:last-child {
+      width: 50%;
+      opacity: 1;
+
+    }
+      @include transition(all .5s ease-in-out);
+    }
+
+    &:hover ~ li:last-child {
+      width: 16.666%;
+      opacity: 0.4;
+    }
+
+    &:nth-child(1) {
+      background: url("images/food1.jpg") top center no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("images/food2.jpg") top right no-repeat;
+    }
+    &:nth-child(3) {
+      background: url("images/food4.jpg") top center no-repeat;
+    }
+    &:nth-child(4) {
+      background: url("images/food5.jpg") top center no-repeat;
+    }
+
+    &:nth-child(5) {
+      background: url("images/drink2.jpg") top center no-repeat;
+    }
+
+    &:nth-child(6) {
+      background: url("images/drink3.jpg") top center no-repeat;
+    }
+    &:nth-child(7) {
+      background: url("images/drinks4.jpg") top center no-repeat;
+    }
+  }
+
+} // End ul
+
+/** Add cool filter efects **/
+.food  ul li {
+  &::before {
+    content: "";
+    display:block;
+    width:0;
+    height:100%;
+  }
+    @include transition(all .5s ease-in-out);
+  }
+
+  &:nth-child(1)::before { background-color: rgba(255, 87, 34, .2)}
+  &:nth-child(2)::before { background-color: rgba(76, 175, 80, .25)}
+  &:nth-child(3)::before { background-color: rgba(33, 150, 243, .25)}
+  &:nth-child(4)::before { background-color: rgba(156, 39, 176, .2)}
+}
+
+input:checked ~ ul li::before {
+  width: 100%;
+  @include transition(all .5s ease-in-out);
+}
+
+input[type="checkbox"] {
+  width:555px;
+  margin: 15px;
+  font-family: "yaris", "georama", monospace;
+  color: white;
+  &::before {
+    content: "Pure CSS Accordion";
+    font-size: 1.5em;
+    position: relative;
+    top:-10px;
+  }
+  &::after{
+    content: "Filters Enabled";
+    color: #caa;
+    position: relative;
+    top:-10px;
+    left: 5px;
+  }
 }
 
 
@@ -672,47 +804,48 @@ color : blue;
 }
 
 
-.map {
+.location h2
+        {
 
-position:center;
-
+  font-style: "georama";
+  color:#8b008b;
+  text-align:center;
+  display:absolute;
+  font-size: 50px;
+  padding-left:100px;
+  margin: 10px 10px;
+  margin-top:80px;
+  justify-content: space-between;
 }
 
 
+.location{
+
+  display:flex;
+  margin-left:30px;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* footer */
 
 .footer {
-text-align : center;
-background-color: white;
+text-align: center;
+background:#004759;
 position : absolute;
 z-index:10;
 bottom:20px;
 display:flex;
-justify-content: center;
+justify-content:right;
 
 }
 
 
-.footer li {
+.box-3 li {
 
   list-style: none;
 }
 
-.footer li a {
+.box-3 li a {
 
 display:inline-block;
 margin-right:20px;
@@ -723,16 +856,15 @@ transition:0.5s;
 
 }
 
-.footer li a:hover {
+.box-3 li a:hover {
  trasnform: scale(0.5)
  translateY(-15PX);
 
 
 }
 
-.social
+.social {
 
-{
 
 /* position:absolute; */
 top:0;
@@ -741,7 +873,8 @@ width:300px;
 height:100%;
 display:flex;
 justify-content:center;
-align-items: center;
+align-items:center;
+background:white;
 }
 
 .social ul {
@@ -761,10 +894,13 @@ align-items: center;
 .menu li {
     display: inline-block;
     width: initial;
-    margin: 0 10px;
+    margin:10px;
     float: none;
 }
 
 .home video {
     width: 100%;
+}
+.bar video {
+  width: 100%;
 }
